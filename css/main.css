@@ -1,27 +1,5 @@
-/* 
- _____   _           _         _                        _                  
-|_   _| | |         | |       | |                      | |                 
-  | |   | |__   __ _| |_ ___  | |_ ___  _ __ ___   __ _| |_ ___   ___  ___ 
-  | |   | '_ \ / _` | __/ _ \ | __/ _ \| '_ ` _ \ / _` | __/ _ \ / _ \/ __|
- _| |_  | | | | (_| | ||  __/ | || (_) | | | | | | (_| | || (_) |  __/\__ \
- \___/  |_| |_|\__,_|\__\___|  \__\___/|_| |_| |_|\__,_|\__\___/ \___||___/
-
-Oh nice, welcome to the stylesheet of dreams. 
-It has it all. Classes, ID's, comments...the whole lot:)
-Enjoy responsibly!
-@ihatetomatoes
-
-*/
-/*
- * HTML5 Boilerplate
- *
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
 /* ==========================================================================
-   Base styles: opinionated defaults
+   Basic css style
    ========================================================================== */
 
 html,
@@ -29,7 +7,7 @@ button,
 input,
 select,
 textarea {
-    color: #222;
+ color:#222;	
 }
 
 body {
@@ -66,13 +44,16 @@ hr {
     padding: 0;
 }
 
+
+
 /*
  * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
  */
-
+ 
 img {
     vertical-align: middle;
 }
+
 
 /*
  * Remove default fieldset styles.
@@ -92,51 +73,33 @@ textarea {
     resize: vertical;
 }
 
-/* ==========================================================================
-   Chrome Frame prompt
-   ========================================================================== */
-
-.chromeframe {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
 
 /* ==========================================================================
    Parallax Scroll
    ========================================================================== */
+   
+   
+  
+
+
+/* ==========================================================================
+   Parallax Scroll
+   ========================================================================== */
+
 body, html {
 	height: 100%;
 	min-height: 100%;
 	background-color: #000000;
 }
-body {
-	
-}
+
 .no-js {
 	padding-top: 106px;
 }
+
 h2 {
 	margin-top: 0;
 }
-.loading {
-	background: url('../img/ico_loading.gif') no-repeat center center;
-}
-section {
-	min-width: 960px;
-	opacity: 0;
-}
-.loaded section,
-.no-js section {
-	opacity: 1;
-	-webkit-transition: opacity 300ms ease-out;
-	-moz-transition: opacity 300ms ease-out;
-	transition: opacity 300ms ease-out;
-}
-main {
-	overflow-x: hidden;
-}
+
 #preload {
 	width: 1px;
 	height: 1px;
@@ -145,6 +108,31 @@ main {
 	top: 0;
 	left: 0;
 }
+
+.loading {
+	background: url('../img/ico_loading.gif') no-repeat center center;
+}
+
+section {
+	min-width: 960px;
+	opacity: 0;
+}
+
+.loaded section,
+.no-js section {
+	opacity: 1;
+	-webkit-transition: opacity 300ms ease-out;
+	-moz-transition: opacity 300ms ease-out;
+	transition: opacity 300ms ease-out;
+}
+
+
+#wrapper{
+	overflow-x: hidden;
+}
+
+
+
 .bcg {
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -185,22 +173,27 @@ main {
 	}
 
 /* Slide 1 */
-#slide-1 .bcg {background-image:url('../img/bcg_slide-1.jpg')}
+#slide-1 .bcg {background-image:url('../img/bg01.jpg')}
 #slide-1 .hsContent {
 	bottom: 200px;
 	top: auto;
 }
 
 /* Slide 2 */
-#slide-2 .bcg {background-image:url('../img/bcg_slide-2.jpg')}
+#slide-2 .bcg {background-image:url('../img/bg02.jpg')}
 #slide-2 .hsContent {
 	margin-left: -450px;
-	bottom: 200px;
 	top: auto;
 }
 
+#slide-2 h2{
+	position:fixed;
+	top:70%;	
+	
+}
+
 /* Slide 3 */
-#slide-3 .bcg {background-image:url('../img/bcg_slide-3.jpg')}
+#slide-3 .bcg {background-image:url('../img/bg03.jpg')}
 #slide-3 .hsContent {
 	margin-left: -239px;
 }
@@ -210,9 +203,11 @@ main {
 	}
 
 /* Slide 4 */
-#slide-4 .bcg {background-image:url('../img/bcg_slide-4.jpg')}
+#slide-4 .bcg {background-image:url('../img/bg04.jpg')}
 #slide-4 .hsContent {
 	margin-left: -450px;
+	position:fixed;
+	top: 250px;
 }
 	#slide-4 h2 {
 		background: none;
@@ -220,11 +215,13 @@ main {
 		padding-right: 0;
 	}
 
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
-/*
+   
+   
+   /*
  * Image replacement
  */
 
@@ -321,91 +318,6 @@ main {
     *zoom: 1;
 }
 
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
 
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
 
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid required HTTP connection: h5bp.com/r
-   ========================================================================== */
-
-@media print {
-    * {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster: h5bp.com/s */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
-     * Don't show links for images, or javascript/internal links
-     */
-
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group; /* h5bp.com/t */
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    @page {
-        margin: 0.5cm;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}

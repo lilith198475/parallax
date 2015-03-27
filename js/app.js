@@ -19,28 +19,46 @@
   
   });
   
+  
+  
   function adjustWindow(){
-	  
-	  //Init the Skrollr
-	  var s = skrollr.init(
-	  { 
-	  	forceHeight: false
-	  });
-	  
-	// Get window size
+
+		// Get window size
 	    winH = $window.height();
-	    
-	    // Keep minimum height 550
+		winW = $window.width();
+	  	
+		  // Keep minimum height 550
 	    if(winH <= 550) {
 			winH = 550;
 		} 
-	    
-	    // Resize our slides
+		
+	 if( winW >= 768){
+		 
+	  //Init the Skrollr
+		  var s = skrollr.init(
+		  { 
+			forceHeight: false
+		  });		  
+		  
+		// Resize our slides
 	    $slider.height(winH);
 	    s.refresh($('.homeSlide'));
 	    // Refresh Skrollr after resizing our sections
+
+	 }else{
+		 //Init the Skrollr
+		  var s = skrollr.init();
+		  s.destroy();
+	 }
+	  
+	 //Check if it works on a touchscreen
+	 
+	 if(Modernizr.touch) {
 	    
-	    
+		//Init the Skrollr
+		  var s = skrollr.init();
+		  s.destroy();
+	 }
 	}
 		
  
